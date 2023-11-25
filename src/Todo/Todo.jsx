@@ -16,6 +16,7 @@ export default function Todo({
   const { task, taskId, isComplete } = todo;
   const [editingTask, setEditingTask] = useState("");
 
+  //handle complete task
   const completeTask = (id) => {
     const latestTask = tasks.map((task) => {
       if (task.taskId === id) {
@@ -26,6 +27,7 @@ export default function Todo({
     setTasks(latestTask);
   };
 
+  //handle edit task
   const editTask = (id) => {
     const targetedTask = tasks.reduce((pre, cur) => {
       if (cur.taskId === id) {
@@ -38,6 +40,7 @@ export default function Todo({
     setTarget(id);
   };
 
+  //handle update task
   const updateTask = () => {
     const updatedTask = tasks.map((task) => {
       if (task.taskId === target) {
@@ -50,6 +53,7 @@ export default function Todo({
     setIsEdit(false);
   };
 
+  //handle delete task
   const deleteTask = (id) => {
     setTasks(() => tasks.filter((task) => task.taskId !== id));
   };
@@ -57,7 +61,7 @@ export default function Todo({
   return (
     <div className={Style.task}>
       <li>
-        {isEdit && target === taskId ? (
+        {isEdit && target === taskId ? ( //conditionally showing the input field for editing task to update.
           <form onSubmit={updateTask} action="">
             <input
               type="text"

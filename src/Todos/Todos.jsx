@@ -3,6 +3,7 @@ import Style from "./Todos.module.css";
 import Todo from "../Todo/Todo";
 import { useEffect, useState } from "react";
 
+//Getting saved task from the local storage
 const getOldTasks = () => {
   const tasks = JSON.parse(localStorage.getItem("tasks")) ?? [];
   return tasks;
@@ -13,6 +14,7 @@ export default function Todos() {
   const [task, setTask] = useState("");
   const [isEdit, setIsEdit] = useState(false);
   const [target, setTarget] = useState(null);
+
   //Adding new task
   const addTask = (e) => {
     setTasks((preTask) => {
@@ -27,6 +29,7 @@ export default function Todos() {
     e.preventDefault();
   };
 
+  //Adding task to the local storage
   useEffect(() => {
     localStorage.setItem("tasks", JSON.stringify(tasks));
   }, [tasks]);
