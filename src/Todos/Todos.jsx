@@ -17,14 +17,15 @@ export default function Todos() {
 
   //Adding new task
   const addTask = (e) => {
-    setTasks((preTask) => {
-      const newTask = {
-        taskId: Date.now(),
-        isComplete: false,
-        task,
-      };
-      return [...preTask, newTask];
-    });
+    task.trim().length > 0 &&
+      setTasks((preTask) => {
+        const newTask = {
+          taskId: Date.now(),
+          isComplete: false,
+          task: task.trim(),
+        };
+        return [...preTask, newTask];
+      });
     setTask("");
     e.preventDefault();
   };
