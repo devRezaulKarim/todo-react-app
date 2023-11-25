@@ -1,0 +1,122 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.task {
+
+    width: 100%;
+    padding: 8px 0 8px 12px;
+    font-size: 20px;
+    margin-bottom: 4px;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(24, 154, 180, 0.95) 15%, rgba(24, 154, 180, 1) 50%, rgba(24, 154, 180, 0.95) 85%, rgba(255, 255, 255, 1) 100%);
+    
+}
+
+.task form{
+    display: inline-block;
+    width: 80%;
+   
+}
+.task input{
+    font-size: 16px;
+    width: 100%;
+    outline: none;
+    border: none;
+    padding:4px 8px;
+}
+
+.task li {
+    width: 100%;
+    position: relative;
+    color: #fff;
+}
+.task span {
+    width: 70%;
+    display: inline-block;
+    white-space: nowrap; 
+    overflow: hidden;
+    margin-bottom: -5px;
+}
+
+.taskBtns {
+    position: absolute;
+    right: 0;
+    top: 0;
+    display: flex;
+    align-items: center;
+    
+}
+
+button {
+    font-size: 20px;
+    background-color: transparent;
+    border: none;
+    margin:0 8px;
+    cursor: pointer;
+    
+}
+
+button[title="Complete"] {
+    color: #fff;
+}
+
+button[title="Edit"], button[title="Save"] {
+    color: #ffcc00;
+}
+
+button[title="Delete"] {
+    color: #FF0000;
+    font-size: 22px;
+    
+}
+
+.complete{
+    text-decoration: line-through #000 2px;
+}
+
+
+
+@media (max-width: 991.98px) {
+    .task {
+        font-size: 32px;
+    }
+
+    button {
+        font-size: 28px;
+
+    }
+
+    button:last-child {
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .task {
+        font-size: 24px;
+
+    }
+
+
+    button {
+        font-size: 24px;
+
+    }
+
+    button:last-child {
+        font-size: 28px;
+    }
+    .task span {
+        width: 55%;
+
+    }
+    button {
+
+        margin:0 4px;
+
+        
+    }
+}

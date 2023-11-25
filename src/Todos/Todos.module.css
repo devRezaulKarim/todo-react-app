@@ -1,0 +1,122 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.todosContainer{
+    max-width: 800px;
+    margin: auto;
+    background-color: lightblue;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 24px;
+    min-height: 100vh;
+}
+.taskForm{
+    display: flex;
+    width: 70%;
+    position: relative;
+    margin: 24px 0;
+
+}
+.submitBtnIcon{
+    transition: all .5s;
+}
+
+.submitBtnWrapper{
+    position: absolute;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    background-color: #189AB4;
+    padding: 4px 8px;
+    font-size: 24px;
+    border-radius: 20px 4px 4px 20px;
+    transition: all 0.2s;
+    color: #FFF;
+    &:hover{
+        box-shadow: 0 0 2px 2px gray;
+    }
+    &:hover .submitBtnIcon{
+        transform: rotateZ(180deg);
+    }
+}
+.taskInput{
+    width: 100%;
+    font-size: 24px;
+    padding: 4px 12px;
+    outline: none;
+    border: none;
+    border-radius: 4px;
+}
+
+.submitBtn{
+    font-size: 24px;
+    background-color: transparent;
+    border: none;
+    color: #FFF;
+}
+.taskList{
+    width: 70%;
+}
+.taskList ol{
+    list-style-position: inside;
+
+}
+
+.completedHeading{
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 8px;
+}
+
+
+@media (max-width: 991.98px) {
+    .taskForm{
+        width: 95%;
+        
+    }
+    .taskList{
+        width: 95%;
+    }
+    .submitBtnWrapper{
+        font-size: 32px;
+
+    }
+    .taskInput{
+        font-size: 32px;
+
+    }
+    .submitBtn{
+        font-size: 32px;
+    }
+
+    .completedHeading{
+        font-size: 32px;
+    }
+}
+
+
+@media (max-width: 575.98px) {
+    .submitBtnWrapper{
+        font-size: 16px;
+
+    }
+    .taskInput{
+        font-size: 16px;
+        padding-right: 110px ;
+    }
+    .submitBtn{
+        font-size: 16px;
+    }
+    .completedHeading{
+        font-size: 22px;
+    }
+
+}
+
