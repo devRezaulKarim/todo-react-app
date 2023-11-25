@@ -1,7 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
 }
 
 .task {
@@ -11,7 +13,7 @@
     font-size: 20px;
     margin-bottom: 4px;
     background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(24, 154, 180, 0.95) 15%, rgba(24, 154, 180, 1) 50%, rgba(24, 154, 180, 0.95) 85%, rgba(255, 255, 255, 1) 100%);
-    
+    position: relative;
 }
 
 .task form{
@@ -29,7 +31,7 @@
 
 .task li {
     width: 100%;
-    position: relative;
+    
     color: #fff;
 }
 .task span {
@@ -37,7 +39,7 @@
     display: inline-block;
     white-space: nowrap; 
     overflow: hidden;
-    margin-bottom: -5px;
+    margin-bottom: -8px;
 }
 
 .taskBtns {
@@ -46,11 +48,11 @@
     top: 0;
     display: flex;
     align-items: center;
-    
+    padding-top: 6px;
 }
 
 button {
-    font-size: 20px;
+    font-size: 22px;
     background-color: transparent;
     border: none;
     margin:0 8px;
@@ -64,16 +66,18 @@ button[title="Complete"] {
 
 button[title="Edit"], button[title="Save"] {
     color: #ffcc00;
+    padding-top: 6px;
 }
 
 button[title="Delete"] {
     color: #FF0000;
-    font-size: 22px;
-    
+    font-size: 28px;
+    margin-left: 0;
 }
 
 .complete{
-    text-decoration: line-through #000 2px;
+    text-decoration: line-through #fff 2px;
+    width: 100%;
 }
 
 
@@ -84,12 +88,18 @@ button[title="Delete"] {
     }
 
     button {
-        font-size: 28px;
+        padding-top: 8px;
+        font-size: 32px;
 
     }
 
     button:last-child {
-        font-size: 32px;
+        padding-top: 6px;
+        font-size: 36px;
+    }
+    .task input{
+        font-size: 24px;
+        padding:4px 8px;
     }
 }
 
@@ -100,23 +110,20 @@ button[title="Delete"] {
 
     }
 
-
     button {
-        font-size: 24px;
-
+        font-size: 28px;
+        padding-top: 4px;
     }
 
-    button:last-child {
+    button[title="Delete"] {
         font-size: 28px;
+        padding-top: 4px;
     }
     .task span {
-        width: 55%;
-
+        width: 75%;
     }
+
     button {
-
         margin:0 4px;
-
-        
     }
 }
