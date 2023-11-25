@@ -17,7 +17,7 @@ export default function Todos() {
 
   //Adding new task
   const addTask = (e) => {
-    task.trim().length > 0 &&
+    task.trim().length > 0 && //Checking unnecessary white space
       setTasks((preTask) => {
         const newTask = {
           taskId: Date.now(),
