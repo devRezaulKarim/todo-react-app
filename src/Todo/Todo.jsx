@@ -2,6 +2,7 @@
 import { useState } from "react";
 import Style from "./Todo.module.css";
 import { FaCheckCircle, FaEdit, FaSave } from "react-icons/fa";
+import { BiSolidEdit } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
 
 export default function Todo({
@@ -92,7 +93,7 @@ export default function Todo({
               </button>
             ) : (
               <button onClick={() => editTask(taskId)} title="Edit">
-                <FaEdit />
+                <BiSolidEdit />
               </button>
             ))}
           {target !== taskId && (

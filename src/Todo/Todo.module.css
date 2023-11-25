@@ -66,9 +66,11 @@ button[title="Complete"] {
 
 button[title="Edit"], button[title="Save"] {
     color: #ffcc00;
+
+}
+button[title="Save"]{
     padding-top: 6px;
 }
-
 button[title="Delete"] {
     color: #FF0000;
     font-size: 28px;
