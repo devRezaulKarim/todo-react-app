@@ -83,7 +83,7 @@ button[title="Delete"] {
 }
 
 .complete{
-    text-decoration: line-through #fff 2px;
+    text-decoration: line-through var(--primary-color) 2px;
     width: 100%;
 }
 
