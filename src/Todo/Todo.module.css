@@ -5,6 +5,12 @@
     box-sizing: border-box;
     font-family: 'Poppins', sans-serif;
 }
+:root{
+    --primary-color: #B68D40;
+    --secondary-color: #D6AD60;
+    --accent-color: #F4EBD0;
+    --dark-color: #122620;
+}
 
 .task {
 
@@ -12,7 +18,7 @@
     padding: 8px 0 8px 12px;
     font-size: 20px;
     margin-bottom: 4px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, rgba(24, 154, 180, 0.95) 15%, rgba(24, 154, 180, 1) 50%, rgba(24, 154, 180, 0.95) 85%, rgba(255, 255, 255, 1) 100%);
+    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, var(--dark-color)15%, var(--dark-color) 50%, var(--dark-color) 85%, rgba(255, 255, 255, 1) 100%);
     position: relative;
 }
 
@@ -31,8 +37,7 @@
 
 .task li {
     width: 100%;
-    
-    color: #fff;
+    color: var(--primary-color);
 }
 .task span {
     width: 70%;

@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import Style from "./Todo.module.css";
+// eslint-disable-next-line no-unused-vars
 import { FaCheckCircle, FaEdit, FaSave } from "react-icons/fa";
 import { BiSolidEdit } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
