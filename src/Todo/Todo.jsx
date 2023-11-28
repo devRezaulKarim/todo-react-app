@@ -4,8 +4,7 @@ import Style from "./Todo.module.css";
 // eslint-disable-next-line no-unused-vars
 import { FaCheckCircle, FaEdit, FaSave } from "react-icons/fa";
 import { BiSolidEdit } from "react-icons/bi";
-import { MdDelete } from "react-icons/md";
-import { MdAddTask } from "react-icons/md";
+import { MdAssignmentAdd, MdDelete, MdLibraryAdd } from "react-icons/md";
 
 export default function Todo({
   todo,
@@ -111,7 +110,7 @@ export default function Todo({
             ))}
           {target !== taskId && isComplete && (
             <button onClick={() => reAddTask(taskId)} title="Re-add">
-              <MdAddTask />
+              <MdLibraryAdd />
             </button>
           )}
           {target !== taskId && (
