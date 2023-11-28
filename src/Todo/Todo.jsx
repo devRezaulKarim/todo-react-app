@@ -5,6 +5,7 @@ import Style from "./Todo.module.css";
 import { FaCheckCircle, FaEdit, FaSave } from "react-icons/fa";
 import { BiSolidEdit } from "react-icons/bi";
 import { MdDelete } from "react-icons/md";
+import { MdAddTask } from "react-icons/md";
 
 export default function Todo({
   todo,
@@ -23,6 +24,17 @@ export default function Todo({
     const latestTask = tasks.map((task) => {
       if (task.taskId === id) {
         task.isComplete = true;
+      }
+      return task;
+    });
+    setTasks(latestTask);
+  };
+
+  //
+  const reAddTask = (id) => {
+    const latestTask = tasks.map((task) => {
+      if (task.taskId === id) {
+        task.isComplete = false;
       }
       return task;
     });
@@ -97,6 +109,11 @@ export default function Todo({
                 <BiSolidEdit />
               </button>
             ))}
+          {target !== taskId && isComplete && (
+            <button onClick={() => reAddTask(taskId)} title="Re-add">
+              <MdAddTask />
+            </button>
+          )}
           {target !== taskId && (
             <button onClick={() => deleteTask(taskId)} title="Delete">
               <MdDelete />

@@ -1,136 +1,136 @@
-@import url('https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital@0;1&display=swap");
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Poppins', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
 }
-:root{
-    --primary-color: #B68D40;
-    --secondary-color: #D6AD60;
-    --accent-color: #F4EBD0;
-    --dark-color: #122620;
+:root {
+  --primary-color: #b68d40;
+  --secondary-color: #d6ad60;
+  --accent-color: #f4ebd0;
+  --dark-color: #122620;
 }
 
 .task {
-
-    width: 100%;
-    padding: 8px 0 8px 12px;
-    font-size: 20px;
-    margin-bottom: 4px;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 1) 0%, var(--dark-color)15%, var(--dark-color) 50%, var(--dark-color) 85%, rgba(255, 255, 255, 1) 100%);
-    position: relative;
+  width: 100%;
+  padding: 8px 0 8px 12px;
+  font-size: 20px;
+  margin-bottom: 4px;
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    var(--dark-color) 15%,
+    var(--dark-color) 50%,
+    var(--dark-color) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
+  position: relative;
 }
 
-.task form{
-    display: inline-block;
-    width: 80%;
-   
+.task form {
+  display: inline-block;
+  width: 80%;
 }
-.task input{
-    font-size: 16px;
-    width: 100%;
-    outline: none;
-    border: none;
-    padding:4px 8px;
+.task input {
+  font-size: 16px;
+  width: 100%;
+  outline: none;
+  border: none;
+  padding: 4px 8px;
 }
 
 .task li {
-    width: 100%;
-    color: var(--primary-color);
+  width: 100%;
+  color: var(--accent-color);
 }
 .task span {
-    width: 70%;
-    display: inline-block;
-    white-space: nowrap; 
-    overflow: hidden;
-    margin-bottom: -8px;
+  width: 70%;
+  display: inline-block;
+  white-space: nowrap;
+  overflow: hidden;
+  margin-bottom: -8px;
 }
 
 .taskBtns {
-    position: absolute;
-    right: 0;
-    top: 0;
-    display: flex;
-    align-items: center;
-    padding-top: 6px;
+  position: absolute;
+  right: 0;
+  top: 0;
+  display: flex;
+  align-items: center;
+  padding-top: 6px;
 }
 
 button {
-    font-size: 22px;
-    background-color: transparent;
-    border: none;
-    margin:0 8px;
-    cursor: pointer;
-    
+  font-size: 22px;
+  background-color: transparent;
+  border: none;
+  margin: 0 8px;
+  cursor: pointer;
 }
 
-button[title="Complete"] {
-    color: #fff;
+button[title="Complete"],
+button[title="Re-add"] {
+  color: #fff;
 }
 
-button[title="Edit"], button[title="Save"] {
-    color: #ffcc00;
-
+button[title="Edit"],
+button[title="Save"] {
+  color: #ffcc00;
 }
-button[title="Save"]{
-    padding-top: 6px;
+button[title="Save"] {
+  padding-top: 6px;
 }
 button[title="Delete"] {
-    color: #FF0000;
-    font-size: 28px;
-    margin-left: 0;
+  color: #ff0000;
+  font-size: 28px;
+  margin-left: 0;
 }
 
-.complete{
-    text-decoration: line-through var(--primary-color) 2px;
-    width: 100%;
+.complete {
+  text-decoration: line-through var(--accent-color) 2px;
+  width: 100%;
 }
-
-
 
 @media (max-width: 991.98px) {
-    .task {
-        font-size: 32px;
-    }
+  .task {
+    font-size: 32px;
+  }
 
-    button {
-        padding-top: 8px;
-        font-size: 32px;
+  button {
+    padding-top: 8px;
+    font-size: 32px;
+  }
 
-    }
-
-    button:last-child {
-        padding-top: 6px;
-        font-size: 36px;
-    }
-    .task input{
-        font-size: 24px;
-        padding:4px 8px;
-    }
+  button:last-child {
+    padding-top: 6px;
+    font-size: 36px;
+  }
+  .task input {
+    font-size: 24px;
+    padding: 4px 8px;
+  }
 }
 
-
 @media (max-width: 575.98px) {
-    .task {
-        font-size: 24px;
+  .task {
+    font-size: 24px;
+  }
 
-    }
+  button {
+    font-size: 28px;
+    padding-top: 4px;
+  }
 
-    button {
-        font-size: 28px;
-        padding-top: 4px;
-    }
+  button[title="Delete"] {
+    font-size: 28px;
+    padding-top: 4px;
+  }
+  .task span {
+    width: 75%;
+  }
 
-    button[title="Delete"] {
-        font-size: 28px;
-        padding-top: 4px;
-    }
-    .task span {
-        width: 75%;
-    }
-
-    button {
-        margin:0 4px;
-    }
+  button {
+    margin: 0 4px;
+  }
 }
