@@ -10,6 +10,7 @@
   --secondary-color: #d6ad60;
   --accent-color: #f4ebd0;
   --dark-color: #122620;
+  --bg-color: #073b3a;
 }
 
 .task {
@@ -26,6 +27,17 @@
     rgba(255, 255, 255, 1) 100%
   );
   position: relative;
+}
+
+.task:nth-child(even) {
+  background: linear-gradient(
+    0deg,
+    rgba(255, 255, 255, 1) 0%,
+    var(--bg-color) 15%,
+    var(--bg-color) 50%,
+    var(--bg-color) 85%,
+    rgba(255, 255, 255, 1) 100%
+  );
 }
 
 .task form {
