@@ -4,7 +4,7 @@ import Style from "./Todo.module.css";
 // eslint-disable-next-line no-unused-vars
 import { FaCheckCircle, FaEdit, FaSave } from "react-icons/fa";
 import { BiSolidEdit } from "react-icons/bi";
-import { MdAssignmentAdd, MdDelete, MdLibraryAdd } from "react-icons/md";
+import { MdDelete, MdLibraryAdd } from "react-icons/md";
 
 export default function Todo({
   todo,
@@ -57,13 +57,15 @@ export default function Todo({
   const updateTask = () => {
     const updatedTask = tasks.map((task) => {
       if (task.taskId === target) {
-        return { ...task, task: editingTask };
+        if (editingTask.trim().length > 0) {
+          setIsEdit(false);
+          return { ...task, task: editingTask };
+        } else return task;
       }
       return task;
     });
     setTasks(() => updatedTask);
     setTarget(null);
-    setIsEdit(false);
   };
 
   //handle delete task
