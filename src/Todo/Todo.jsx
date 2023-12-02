@@ -58,14 +58,15 @@ export default function Todo({
     const updatedTask = tasks.map((task) => {
       if (task.taskId === target) {
         if (editingTask.trim().length > 0) {
-          setIsEdit(false);
           return { ...task, task: editingTask };
         } else return task;
       }
       return task;
     });
+
     setTasks(() => updatedTask);
     setTarget(null);
+    setIsEdit(false);
   };
 
   //handle delete task
